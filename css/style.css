@@ -1,0 +1,151 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .main-heading {
+  margin: 10rem 0;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 440px) {
+  header .main-heading {
+    margin: 3rem 0 5rem 0;
+  }
+}
+
+main .boards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 0.5rem;
+  gap: 5rem;
+  padding: 0 2.5rem;
+}
+
+@media (max-width: 440px) {
+  main .boards {
+    gap: 4rem;
+  }
+}
+
+main .boards .board-container {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+main .boards .board-container .board-title {
+  background-color: transparent;
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 1.6rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main .boards .board-container .tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+}
+
+main .boards .board-container .tasks-list .task-cont {
+  position: relative;
+  border-radius: 0.5rem;
+  width: 25rem;
+  height: 3rem;
+}
+
+main .boards .board-container .tasks-list .task-cont .task,
+.add-btn {
+  width: 25rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1.4rem;
+}
+
+main .boards .board-container .tasks-list .task-cont .task:disabled {
+  background-color: var(--main-text-color);
+  color: var(--black-color);
+}
+
+main .boards .board-container .tasks-list .task-cont .task {
+  cursor: move;
+}
+
+main .boards .board-container .tasks-list .task-cont .control-btns {
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.tasks-list .task-cont .control-btns button {
+  padding: 0.4rem;
+  color: var(--main-text-color);
+  border-radius: 50rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 900;
+  opacity: 0.6;
+}
+
+.tasks-list .task-cont .control-btns button:hover {
+  opacity: 1;
+}
+.tasks-list .task-cont .control-btns button.edit {
+  color: var(--edit-btn-color);
+}
+.tasks-list .task-cont .control-btns button.remove {
+  color: var(--trash-btn-color);
+}
+
+/*  Footer  */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0rem;
+}
+
+@media (max-width: 440px) {
+  footer {
+    margin: 3rem 0rem;
+  }
+}
+
+footer .foot-content {
+  font-size: 1.3rem;
+  padding: 1.4rem 1.6rem;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+footer .foot-content a {
+  color: #ed1c24;
+  transition: 0.2s;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer .foot-content a:hover {
+  color: var(--main-text-color);
+}
+
+@media (max-width: 440px) {
+  footer .foot-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  footer .foot-content .seperator {
+    display: none;
+  }
+}
